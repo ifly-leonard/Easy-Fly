@@ -1,0 +1,3 @@
+
+['KU344', 'datetime.datetime(2020,06,23,11,36)', 'Kuwait International', 'VIDP 230800Z 08006G16KT 4000 H', 'Indira Gandhi Intern', 'VIDP 230800Z 08006G16KT 4000 H', 1528.49, 3.82, 400.0, 350.0, 'OMDB SID RIDAP M557 ', 76000.0, 38000.0, 76000.0, 689.0, 896.0]
+['IAF1', 'datetime.datetime(2020,07,22,23,46)', 'Tambaram Air Force S', '"NoneType object has no attri"', 'Kempegowda Internati', 'VOBL 230830Z 27011KT 9999 SCT0', 142.4, 0.41, 350.0, 270.0, '', 2000.0, 1000.0, 2000.0, 1000.0, '']
