@@ -1,0 +1,124 @@
+<html> 
+   <head>
+   	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.red-deep_orange.min.css" />
+	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+	<!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            
+	<!-- Wide card with share menu button -->
+	<style>
+	.demo-card-wide.mdl-card {
+	  width: 650px;
+	}
+	.demo-card-wide > .mdl-card__title {
+	  color: #fff;
+	  height: 75px;
+	  background: url('https://www.snopes.com/tachyon/2018/06/red_eye_flight_plane.jpg?resize=865,452') center / cover;
+	}
+	.demo-card-wide > .mdl-card__menu {
+	  color: #fff;
+	}
+	.mdl-layout {
+	  align-items: center;
+	  justify-content: center;
+	}
+	</style>
+	<link rel="icon" type="image/png" href="https://webstockreview.net/images/airplane-clipart-logo-3.png"/>
+	<title>EasyFly</title>
+   </head>
+   <body style="background-image:url('https://wallpaperaccess.com/full/445636.jpg'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed;"> 
+   <div class="mdl-layout">
+   <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+	<div class="mdl-card__title" align="center">
+	  <h2 align="center">EasyFlight v2</h2>
+	</div>
+  	<div class="mdl-card__supporting-text">
+  		<div class="mdl-layout">
+    	<a onclick="javascript:openWindow('makeflightplan.html');return false;" style="width:100%"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" id="demo-show-toast" style="width:100%">
+		  Log a Flight
+		</button></a>
+		<div id="demo-toast-example" class="mdl-js-snackbar mdl-snackbar">
+		  <div class="mdl-snackbar__text"></div>
+		  <button class="mdl-snackbar__action" type="button"></button>
+		</div>
+		<script>
+		(function() {
+		  'use strict';
+		  window['counter'] = 0;
+		  var snackbarContainer = document.querySelector('#demo-toast-example');
+		  var showToastButton = document.querySelector('#demo-show-toast');
+		  showToastButton.addEventListener('click', function() {
+		    'use strict';
+		    var data = {message: 'Run Local Server'};
+		    snackbarContainer.MaterialSnackbar.showSnackbar(data);
+		  });
+		}());
+		function openWindow( url )
+		{
+		  window.open(url, '_blank');
+		  window.blur();
+		}
+		</script>
+
+		<br>
+
+		<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored mdl-js-button dialog-button" style="width:100%">
+		  View Logged Flights
+		</button>
+		<dialog id="dialog" class="mdl-dialog">
+		    <h3 class="mdl-dialog__title">Run View Flight Plans</h3>
+		    <div class="mdl-dialog__content">
+		      <p>
+		      Please run the "View Flight Plans" application in the same folder as this webpage.
+		      </p>
+		    </div>
+		    <div class="mdl-dialog__actions">
+		      <div id="cannotconnect"><button type="button" class="mdl-button">OK</button></div>
+		      <div class="mdl-tooltip" data-mdl-for="cannotconnect">
+					For security reasons, web browsers do not allow to launch EXEs.
+  			  </div>
+		    </div>
+		 </dialog>
+		<script>
+				  (function() {
+			    'use strict';
+			    var dialogButton = document.querySelector('.dialog-button');
+			    var dialog = document.querySelector('#dialog');
+			    if (! dialog.showModal) {
+			      dialogPolyfill.registerDialog(dialog);
+			    }
+			    dialogButton.addEventListener('click', function() {
+			       dialog.showModal();
+			    });
+			    dialog.querySelector('button:not([disabled])')
+			    .addEventListener('click', function() {
+			      dialog.close();
+			    });
+			  }());
+		</script>
+
+		<br>
+
+		<button id="diy" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" style="width:100%">
+		  Edit Logs
+		</button>
+		<div class="mdl-tooltip" data-mdl-for="diy">
+			For security reasons, web browsers do not allow to launch files. Please run "Log Editor" found in the same folder as this webpage.
+  		</div>
+
+  		<br>
+
+	   <div class="chip">
+		    In Case of Errors, delete all blank lines blank lines in "Log Editor".
+		    <i class="close material-icons" style="height: 5px">close</i>
+	   </div>
+	 </div>
+	 </div>
+	</div>
+    </div>        
+   </body> 
+</html> 
